@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-body">
 
-                <input type="text" class="form-control" placeholder="Buscar categoria...">
+                <input #input (keyup)="buscarCategoria( input.value )" type="text" class="form-control" placeholder="Buscar categoria...">
 
             </div>
         </div>
@@ -16,13 +16,13 @@
             <div class="card-body">
 
                 <div class="text-right">
-                    <button type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                    <button (click)="crearCategoria()" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
                     <i class="fa fa-plus"></i> 
                     Crear Categoria
                   </button>
                 </div>
 
-                <h3 class="card-title">Categorias registrados ( <small> </small> )</h3>
+                <h3 class="card-title">Categorias registrados ( <small> {{ _categoriaService.totalCategorias }} </small> )</h3>
 
                 <table class="table table-hover">
                     <thead>
@@ -39,14 +39,14 @@
                                 <input [(ngModel)]="categoria.nombre" name="nombre" type="text" class="form-control" placeholder="Nombre del categoria">
                             </td>
                             <td>
-                                <input name="descripcion" type="text" class="form-control" placeholder="Nombre del categoria">
+                                <input [(ngModel)]="categoria.descripcion" name="descripcion" type="text" class="form-control" placeholder="Descripcion del categoria">
                             </td>
                             <td>
-                                <button class="btn btn-primary">
+                                <button (click)="guardarCategoria( categoria )" class="btn btn-primary">
                                 <i class="fa fa-save"></i>
                               </button>
 
-                                <button class="btn btn-danger">
+                                <button (click)="borrarCategoria( categoria )" class="btn btn-danger">
                                 <i class="fa fa-trash-o"></i>
                               </button>
                             </td>

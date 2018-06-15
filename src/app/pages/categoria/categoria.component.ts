@@ -18,12 +18,27 @@ export class CategoriaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.cargarCategorias();
   }
 
+  buscarCategoria(){
 
+  }
   cargarCategorias() {
     this._categoriaService.cargarCategorias()
             .subscribe( categorias => this.categorias = categorias );
+  }
+
+  guardarCategoria(){
+
+  }
+
+  borrarCategoria(){
+
+  }
+
+  crearCategoria(){
+
   }
 
 }
