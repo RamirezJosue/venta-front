@@ -30,6 +30,8 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
 
 // Pipe Module
 import { PipesModule } from '../pipes/pipes.module';
+import { PersonaComponent } from './personas/persona.component';
+import { PersonasComponent } from './personas/personas.component';
 
 @NgModule({
     declarations: [
@@ -43,7 +45,9 @@ import { PipesModule } from '../pipes/pipes.module';
         PromesasComponent,
         RxjsComponent,
         CategoriaComponent,
-        ModalUploadComponent
+        ModalUploadComponent,
+        PersonaComponent,
+        PersonasComponent
     ],
     exports: [
         DashboardComponent,

@@ -1,0 +1,46 @@
+<div class="row animated fadeIn">
+
+    <div class="col-md-6">
+        <div class="card card-body">
+            <h3 class="box-title m-b-0">Cliente: {{ persona.nombre }}</h3>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <form #f="ngForm" ngNativeValidate (ngSubmit)="guardarPersona(f)">
+                        <div class="form-group">
+                            <label>Nombre del Cliente</label>
+                            <input [(ngModel)]="persona.nombre" name="nombre" type="text" class="form-control" placeholder="Nombre del cliente" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo de Documento</label>
+                            <input [(ngModel)]="persona.tipoPersona" name="tipoPersona" type="text" class="form-control" placeholder="Tipo de persona" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Documento</label>
+                            <input [(ngModel)]="persona.numDocumento" name="documento" type="text" class="form-control" placeholder="Documento persona" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input [(ngModel)]="persona.email" name="email" type="email" class="form-control" placeholder="Email de cliente" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Teléfono</label>
+                            <input [(ngModel)]="persona.telefono" name="telefono" type="text" class="form-control" placeholder="Teléfono de cliente" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Dirección</label>
+                            <input [(ngModel)]="persona.direccion" name="direccion" type="text" class="form-control" placeholder="Dirección de cliente" required>
+                        </div>
+
+
+
+
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+                        <i class="fa fa-save"></i>
+                        Guardar
+                      </button>
+                        <a routerLink="/personas" class="btn btn-inverse waves-effect waves-light">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

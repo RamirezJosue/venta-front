@@ -19,7 +19,8 @@ export class SidebarService {
       titulo: 'Mantenimientos',
       icono: 'mdi mdi-folder-lock-open',
       submenu: [
-        { titulo: 'Categorias', url: '/categorias' }
+        { titulo: 'Categorias', url: '/categorias' },
+        { titulo: 'Clientes', url: '/personas' }
       ]
     }
   ];

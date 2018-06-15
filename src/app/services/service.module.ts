@@ -10,8 +10,10 @@ import {
   UsuarioService,
   LoginGuardGuard,
   CategoriaService,
-  SubirArchivoService
+  SubirArchivoService,
+  PersonaService
  } from './service.index';
+
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import {
     UsuarioService,
     LoginGuardGuard,
     CategoriaService,
-    SubirArchivoService
+    SubirArchivoService,
+    PersonaService
   ],
   declarations: []
 })

@@ -10,6 +10,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 
 import { LoginGuardGuard } from '../services/service.index';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { PersonaComponent } from './personas/persona.component';
+import { PersonasComponent } from './personas/personas.component';
 
 
 const pagesRoutes: Routes = [
@@ -26,6 +28,8 @@ const pagesRoutes: Routes = [
             { path: 'account-settings', component: AccoutSettingsComponent, data: { titulo: 'Ajustes de Tema' } },
             // Mantenimiento
             { path: 'categorias', component: CategoriaComponent, data: { titulo: 'Mantenimiento de Categorias' } },
+            { path: 'personas', component: PersonasComponent, data: { titulo: 'Mantenimiento de Personas' } },
+            { path: 'persona/:id', component: PersonaComponent, data: { titulo: 'Actualizar Persona' } },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }
