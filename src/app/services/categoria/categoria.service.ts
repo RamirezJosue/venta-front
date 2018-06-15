@@ -45,12 +45,12 @@ export class CategoriaService {
 
   }
 
-  crearCategoria( nombre: string, descripcion: string) {
+  crearCategoria( nombre: string ) {
 
     let url = URL_SERVICIOS + '/categoria';
     url += '?token=' + this._usuarioService.token;
 
-    return this.http.post( url, { nombre, descripcion } )
+    return this.http.post( url, { nombre } )
               .map( (resp: any) => resp.categoria );
 
   }

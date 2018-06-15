@@ -3,6 +3,8 @@ import { Categoria } from '../../models/categoria.model';
 import { CategoriaService } from '../../services/service.index';
 import { ModalUploadService } from '../../components/modal-upload/modal-upload.service';
 
+declare var swal: any;
+
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.component.html',
@@ -21,23 +23,52 @@ export class CategoriaComponent implements OnInit {
     this.cargarCategorias();
   }
 
-  buscarCategoria(){
+  buscarCategoria( termino: string ){
+    if ( termino.length <= 0 ) {
+      this.cargarCategorias();
+      return;
+    }
 
+    this._categoriaService.buscarCategoria( termino )
+            .subscribe( categorias => this.categorias = categorias );
   }
+
+
   cargarCategorias() {
     this._categoriaService.cargarCategorias()
             .subscribe( categorias => this.categorias = categorias );
   }
 
-  guardarCategoria(){
-
+  guardarCategoria( categoria: Categoria) {
+    this._categoriaService.actualizarCategoria( categoria )
+            .subscribe();
   }
 
-  borrarCategoria(){
+  borrarCategoria( categoria: Categoria) {
 
+    this._categoriaService.borrarCategoria( categoria._id)
+            .subscribe( () => this.cargarCategorias() );
   }
 
   crearCategoria(){
+
+    swal({
+      title: 'Crear categoria',
+      text: 'Ingrese el nombre del categoria',
+      content: 'input',
+      icon: 'info',
+      buttons: true,
+      dangerMode: true
+    }).then( (valor: string ) => {
+
+      if ( !valor || valor.length === 0 ) {
+        return;
+      }
+
+      this._categoriaService.crearCategoria( valor )
+              .subscribe( () => this.cargarCategorias() );
+
+    });
 
   }
 
