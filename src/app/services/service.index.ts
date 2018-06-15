@@ -1,3 +1,5 @@
+export { SubirArchivoService } from './subir-archivo/subir-archivo.service';
+export { CategoriaService } from './categoria/categoria.service';
 export { LoginGuardGuard } from './guards/login-guard.guard';
 
 export { UsuarioService } from './usuario/usuario.service';
