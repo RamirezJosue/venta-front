@@ -31,7 +31,7 @@
                             <th>Código</th>
                             <th>Nombre</th>
                             <th>Stock</th>
-                            <th>IMG</th>
+
                             <th></th>
                         </tr>
                     </thead>
@@ -46,9 +46,7 @@
                             <td>
                                 {{ articulo.stock }}
                             </td>
-                            <td>
-                                {{ articulo.img }}
-                            </td>
+
 
                             <td>
                                 <button [routerLink]="['/articulo', articulo._id ]" class="btn btn-primary">
