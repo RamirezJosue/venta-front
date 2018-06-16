@@ -7,7 +7,7 @@
                 <h6 class="card-subtitle">Nombre de usuario</h6>
                 <form ngNativeValidate #f="ngForm" (ngSubmit)="guardar( f.value )" class="form p-t-20">
                     <div class="form-group">
-                        <label for="exampleInputuname2">Nombre de usuario</label>
+                        <label for="exampleInputuname2">{{ usuario.nombre }}</label>
                         <div class="input-group">
                             <input [ngModel]="usuario.nombre" name="nombre" type="text" class="form-control" placeholder="Nombre de usuario" required>
                             <div class="input-group-addon"><i class="ti-user"></i></div>
@@ -31,11 +31,12 @@
 
     <div class="col-lg-5">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body" aling="center">
                 <h4 class="card-title"><strong>Fotografia </strong>de Usuario</h4>
                 <h6 class="card-subtitle">Actualizar foto del perfil</h6>
 
-                <img src="">
+                <img *ngIf="!imagenTemp" [src]="usuario.img | imagen" class="w150">
+                <img *ngIf="imagenTemp" [src]="imagenTemp" class="w150">
 
                 <input (change)="seleccionImage( $event.target.files[0] )" type="file" />
 
