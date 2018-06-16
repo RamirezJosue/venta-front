@@ -17,6 +17,7 @@ export class PersonaService {
   cargarPersonas() {
 
     let url = URL_SERVICIOS + '/persona';
+    url += '?token=' + this._usuarioService.token;
 
     return this.http.get( url )
               .map( (resp: any) => {
