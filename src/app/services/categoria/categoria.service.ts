@@ -7,6 +7,8 @@ import { Categoria } from '../../models/categoria.model';
 import { map } from 'rxjs/operators';
 import { UsuarioService } from '../usuario/usuario.service';
 
+
+
 @Injectable()
 export class CategoriaService {
 

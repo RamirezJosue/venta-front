@@ -4,6 +4,8 @@ import { URL_SERVICIOS } from '../../config/config';
 import { UsuarioService } from '../usuario/usuario.service';
 import { Persona } from '../../models/persona.model';
 
+import swal from 'sweetalert';
+
 @Injectable()
 export class PersonaService {
 

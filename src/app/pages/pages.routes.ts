@@ -15,6 +15,7 @@ import { PersonasComponent } from './personas/personas.component';
 import { ArticuloComponent } from './articulos/articulo.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from '../login/register.component';
 
 
 const pagesRoutes: Routes = [
@@ -36,6 +37,7 @@ const pagesRoutes: Routes = [
             { path: 'persona/:id', component: PersonaComponent, data: { titulo: 'Actualizar Persona' } },
             { path: 'articulos', component: ArticulosComponent, data: { titulo: 'Mantenimiento de Articulos' } },
             { path: 'articulo/:id', component: ArticuloComponent, data: { titulo: 'Actualizar Articulo' } },
+            { path: 'usuarios', component: RegisterComponent, data: { titulo: 'Mantenimiento de Usuarios' } },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }
