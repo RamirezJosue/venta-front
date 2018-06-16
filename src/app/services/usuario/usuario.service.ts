@@ -105,9 +105,16 @@ export class UsuarioService {
     let url = URL_SERVICIOS + '/usuario/' + usuario._id;
     url += '?token=' + this.token;
 
-    console.log( url );
+    return this.http.put( url, usuario )
+                .map( (resp: any) => {
 
-    return this.http.put( url, usuario );
+                  let usuarioDB: Usuario = resp.usuario;
+
+                  this.guardarStorage( usuarioDB._id, this.token, usuarioDB );
+                  swal('Datos de usuario actualizado', usuario.nombre, 'success');
+
+                  return true;
+                } );
 
 
   }
