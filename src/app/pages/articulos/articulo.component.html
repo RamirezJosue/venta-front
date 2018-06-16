@@ -1,0 +1,49 @@
+<div class="row animated fadeIn">
+
+    <div class="col-md-6">
+        <div class="card card-body">
+            <h3 class="box-title m-b-0">Articulo: {{ articulo.nombre }}</h3>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <form #f="ngForm" ngNativeValidate (ngSubmit)="guardarArticulo(f)">
+                        <div class="form-group">
+                            <label>Código</label>
+                            <input [(ngModel)]="articulo.codigo" name="codigo" type="text" class="form-control" placeholder="Codigo del articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>IMG</label>
+                            <input [(ngModel)]="articulo.img" name="img" type="text" class="form-control" placeholder="Imagen de articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Categoria</label>
+                            <input [(ngModel)]="articulo.categoria" name="cateegoria" type="text" class="form-control" placeholder="Categria del articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input [(ngModel)]="articulo.nombre" name="nombre" type="text" class="form-control" placeholder="Nombre del articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Stock</label>
+                            <input [(ngModel)]="articulo.stock" name="stock" type="text" class="form-control" placeholder="Stock del Articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Descripción</label>
+                            <input [(ngModel)]="articulo.descripcion" name="descripcion" type="text" class="form-control" placeholder="Descripcion del articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo IGV</label>
+                            <input [(ngModel)]="articulo.tipoIgv" name="tipoIgv" type="text" class="form-control" placeholder="Tipo IGV del articulo" required>
+                        </div>
+
+
+
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+                        <i class="fa fa-save"></i>
+                        Guardar
+                      </button>
+                        <a routerLink="/articulos" class="btn btn-inverse waves-effect waves-light">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

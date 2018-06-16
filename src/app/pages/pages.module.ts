@@ -32,6 +32,8 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
 import { PipesModule } from '../pipes/pipes.module';
 import { PersonaComponent } from './personas/persona.component';
 import { PersonasComponent } from './personas/personas.component';
+import { ArticuloComponent } from './articulos/articulo.component';
+import { ArticulosComponent } from './articulos/articulos.component';
 import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
@@ -49,6 +51,8 @@ import { ProfileComponent } from './profile/profile.component';
         ModalUploadComponent,
         PersonaComponent,
         PersonasComponent,
+        ArticuloComponent,
+        ArticulosComponent,
         ProfileComponent
     ],
     exports: [

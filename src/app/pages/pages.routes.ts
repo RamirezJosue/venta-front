@@ -12,6 +12,8 @@ import { LoginGuardGuard } from '../services/service.index';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { PersonaComponent } from './personas/persona.component';
 import { PersonasComponent } from './personas/personas.component';
+import { ArticuloComponent } from './articulos/articulo.component';
+import { ArticulosComponent } from './articulos/articulos.component';
 import { ProfileComponent } from './profile/profile.component';
 
 
@@ -32,6 +34,8 @@ const pagesRoutes: Routes = [
             { path: 'categorias', component: CategoriaComponent, data: { titulo: 'Mantenimiento de Categorias' } },
             { path: 'personas', component: PersonasComponent, data: { titulo: 'Mantenimiento de Personas' } },
             { path: 'persona/:id', component: PersonaComponent, data: { titulo: 'Actualizar Persona' } },
+            { path: 'articulos', component: ArticulosComponent, data: { titulo: 'Mantenimiento de Articulos' } },
+            { path: 'articulo/:id', component: ArticuloComponent, data: { titulo: 'Actualizar Articulo' } },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }
