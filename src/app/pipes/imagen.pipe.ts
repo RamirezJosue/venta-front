@@ -8,7 +8,7 @@ export class ImagenPipe implements PipeTransform {
 
   transform( img: string, tipo: string = 'usuario'): any {
 
-    let url = URL_SERVICIOS + '/imagen'; // <------ ahi esta
+    let url = URL_SERVICIOS + '/imagen';
 
     if ( !img ) {
       return url + '/usuarios/xxx';

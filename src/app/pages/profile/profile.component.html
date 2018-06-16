@@ -1,50 +1,58 @@
-<div class="row">
+<div class="row animated fadeIn">
 
-    <div class="col-lg-6">
+    <div class="col-lg-7">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Perfil de <strong>Usuario</strong></h4>
-                <h6 class="card-subtitle">made with bootstrap elements</h6>
-                <form class="form p-t-20">
+                <h6 class="card-subtitle">Nombre de usuario</h6>
+                <form ngNativeValidate #f="ngForm" (ngSubmit)="guardar( f.value )" class="form p-t-20">
                     <div class="form-group">
-                        <label for="exampleInputuname2">User Name</label>
+                        <label for="exampleInputuname2">Nombre de usuario</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="exampleInputuname2" placeholder="Username">
+                            <input [ngModel]="usuario.nombre" name="nombre" type="text" class="form-control" placeholder="Nombre de usuario" required>
                             <div class="input-group-addon"><i class="ti-user"></i></div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail2">Email address</label>
+                        <label for="exampleInputEmail2">Dirección de correo electrónico</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+                            <input [ngModel]="usuario.email" name="email" type="email" class="form-control" placeholder="Ingrese correo electrónico" required>
                             <div class="input-group-addon"><i class="ti-email"></i></div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputpwd2">Password</label>
-                        <div class="input-group">
-                            <input type="password" class="form-control" id="exampleInputpwd2" placeholder="Enter pwd">
-                            <div class="input-group-addon"><i class="ti-lock"></i></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputpwd3">Confirm Password</label>
-                        <div class="input-group">
-                            <input type="password" class="form-control" id="exampleInputpwd3" placeholder="Enter pwd">
-                            <div class="input-group-addon"><i class="ti-lock"></i></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="checkbox checkbox-success">
-                            <input id="checkbox2" type="checkbox">
-                            <label for="checkbox2"> Remember me </label>
-                        </div>
-                    </div>
                     <div class="text-left">
-                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Guardar <i class="fa fa-save"></i></button>
+
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-5">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title"><strong>Fotografia </strong>de Usuario</h4>
+                <h6 class="card-subtitle">Actualizar foto del perfil</h6>
+
+                <img src="">
+
+                <div class="image-upload">
+                    <label for="file-input">
+                        <img src="assets/images/icon/image.png"/>
+                    </label>
+
+                    <input id="file-input" type="file" />
+                </div>
+
+                <br>
+                <br>
+
+                <button type="button" class="btn btn-block btn-success waves-effect waves-light m-r-10">
+                  <strong>Actualizar Foto</strong>
+                  <i class="fa fa-check"></i>
+                </button>
+
             </div>
         </div>
     </div>
