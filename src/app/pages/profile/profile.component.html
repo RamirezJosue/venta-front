@@ -37,18 +37,11 @@
 
                 <img src="">
 
-                <div class="image-upload">
-                    <label for="file-input">
-                        <img src="assets/images/icon/image.png"/>
-                    </label>
+                <input (change)="seleccionImage( $event.target.files[0] )" type="file" />
 
-                    <input id="file-input" type="file" />
-                </div>
+                <br><br>
 
-                <br>
-                <br>
-
-                <button type="button" class="btn btn-block btn-success waves-effect waves-light m-r-10">
+                <button (click)="cambiarImagen()" [disabled]="!imagenSubir" type="button" class="btn btn-block btn-success waves-effect waves-light m-r-10">
                   <strong>Actualizar Foto</strong>
                   <i class="fa fa-check"></i>
                 </button>
