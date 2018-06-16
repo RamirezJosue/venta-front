@@ -8,14 +8,10 @@ export class ImagenPipe implements PipeTransform {
 
   transform( img: string, tipo: string = 'usuario'): any {
 
-    let url = URL_SERVICIOS + '/img';
+    let url = URL_SERVICIOS + '/imagen'; // <------ ahi esta
 
     if ( !img ) {
       return url + '/usuarios/xxx';
-    }
-
-    if ( img.indexOf('https') >= 0 ) {
-      return img;
     }
 
     switch ( tipo ) {
@@ -32,8 +28,12 @@ export class ImagenPipe implements PipeTransform {
          url += '/hospitales/' + img;
       break;
 
+      case 'articulo':
+         url += '/articulos/' + img;
+      break;
+
       default:
-        console.log('tipo de imagen no existe, usuario, medicos, hospitales');
+        console.log('tipo de imagen no existe, usuario, medicos, hospitales, articulos');
         url += '/usurios/xxx';
     }
 
