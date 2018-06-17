@@ -18,7 +18,6 @@ export class ArticuloService {
     cargarArticulos() {
 
         let url = URL_SERVICIOS + '/articulo';
-        url += '?token=' + this._usuarioService.token;
 
         return this.http.get(url)
             .map((resp: any) => {

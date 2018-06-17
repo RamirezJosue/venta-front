@@ -1,9 +1,9 @@
 export class Articulo {
 
     constructor(
-        public codigo: string,
+        public stock: string,
         public nombre?: string,
-        public stock?: string,
+        public codigo?: string,
         public tipoIgv?: string,
         public descripcion?: string,
         public img?: string,

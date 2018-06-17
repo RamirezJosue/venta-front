@@ -3,6 +3,8 @@ import { Articulo } from '../../models/articulo.model';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ArticuloService } from '../../services/articulo/articulo.service';
 import { NgForm } from '@angular/forms';
+import { CategoriaService } from '../../services/categoria/categoria.service';
+import { Categoria } from '../../models/categoria.model';
 
 @Component({
   selector: 'app-articulo',
@@ -11,10 +13,13 @@ import { NgForm } from '@angular/forms';
 })
 export class ArticuloComponent implements OnInit {
 
+  categorias: Categoria[] = [];
   articulo: Articulo = new Articulo('', '',);
+  categoria: Categoria = new Categoria('');
 
   constructor(
     public _articuloService: ArticuloService,
+    public _categoriaService: CategoriaService,
     public router: Router,
     public activatedRoute: ActivatedRoute
   ) {
@@ -29,9 +34,13 @@ export class ArticuloComponent implements OnInit {
 
     });
 
-   }
+  }
 
   ngOnInit() {
+
+    this._categoriaService.cargarCategorias()
+          .subscribe( categorias => this.categorias = categorias );
+
   }
 
   cargarArticulo( id: string ) {
@@ -40,6 +49,8 @@ export class ArticuloComponent implements OnInit {
 
             console.log( articulo );
             this.articulo = articulo;
+            this.articulo.categoria = articulo.categoria._id;
+            this.cambioCategoria( this.articulo.categoria );
           });
   }
 
@@ -57,10 +68,19 @@ export class ArticuloComponent implements OnInit {
 
               this.articulo._id = articulo._id;
 
-              this.router.navigate(['/articulos']);
+              this.router.navigate(['/articulos' ]);
 
             });
 
   }
+
+  cambioCategoria( id: string ) {
+
+    this._categoriaService.obtenerCategoria( id )
+          .subscribe( categoria => this.categoria = categoria );
+
+  }
+
+
 
 }
