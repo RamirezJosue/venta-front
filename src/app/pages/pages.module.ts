@@ -36,6 +36,8 @@ import { ArticuloComponent } from './articulos/articulo.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { IngresoComponent } from './ingresos/ingreso.component';
 import { IngresosComponent } from './ingresos/ingresos.component';
+import { VentaComponent } from './ventas/venta.component';
+import { VentasComponent } from './ventas/ventas.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
@@ -58,6 +60,8 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
         ArticulosComponent,
         IngresoComponent,
         IngresosComponent,
+        VentaComponent,
+        VentasComponent,
         ProfileComponent,
         UsuariosComponent
     ],

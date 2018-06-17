@@ -16,6 +16,8 @@ import { ArticuloComponent } from './articulos/articulo.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { IngresoComponent } from './ingresos/ingreso.component';
 import { IngresosComponent } from './ingresos/ingresos.component';
+import { VentaComponent } from './ventas/venta.component';
+import { VentasComponent } from './ventas/ventas.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
@@ -44,6 +46,9 @@ const pagesRoutes: Routes = [
             // Compras
             { path: 'ingresos', component: IngresosComponent, data: { titulo: 'Mantenimiento de Ingreso' } },
             { path: 'ingreso/:id', component: IngresoComponent, data: { titulo: 'Actualizar Ingreso' } },
+            // Ventas
+            { path: 'ventas', component: VentasComponent, data: { titulo: 'Mantenimiento de Venta' } },
+            { path: 'venta/:id', component: VentaComponent, data: { titulo: 'Actualizar Venta' } },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }
