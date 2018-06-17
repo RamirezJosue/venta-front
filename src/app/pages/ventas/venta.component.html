@@ -1,0 +1,61 @@
+<div class="row animated fadeIn">
+
+    <div class="col-md-6">
+        <div class="card card-body">
+            <h3 class="box-title m-b-0">Venta: {{ venta.nombre }}</h3>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12">
+                    <form #f="ngForm" ngNativeValidate (ngSubmit)="guardarVenta(f)">
+
+                        <div class="form-group">
+                            <label>Cliente</label>
+                            <select (change)="cambioPersona( $event.target.value )" [(ngModel)]="venta.proveedor" name="proveedor" class="form-control" required>
+                                <option value="">Seleccione Cliente</option>
+                                <option *ngFor="let persona of personas" [value]="persona._id">
+                                    {{ persona.nombre }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo Comprobante</label>
+                            <input [(ngModel)]="venta.tipoComprobante" name="tipoComprobante" type="text" class="form-control" placeholder="Nombre del articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Serie</label>
+                            <input [(ngModel)]="venta.serieComprobante" name="serieComprobante" type="text" class="form-control" placeholder="Stock del Articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Número</label>
+                            <input [(ngModel)]="venta.numComprobante" name="numComprobante" type="text" class="form-control" placeholder="Descripcion del articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Total Venta</label>
+                            <input [(ngModel)]="venta.totalVenta" name="totalVenta" type="text" class="form-control" placeholder="Tipo IGV del articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Impuesto</label>
+                            <input [(ngModel)]="venta.impuesto" name="impuesto" type="text" class="form-control" placeholder="Codigo del articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Cuenta Cliente</label>
+                            <input [(ngModel)]="venta.cuentaCliente" name="cuentaCliente" type="text" class="form-control" placeholder="Codigo del articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Cuenta IGV</label>
+                            <input [(ngModel)]="venta.cuentaIgv" name="cuentaIgv" type="text" class="form-control" placeholder="Codigo del articulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo de Venta</label>
+                            <input [(ngModel)]="venta.tipoVenta" name="tipoVenta" type="text" class="form-control" placeholder="Codigo del articulo" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">
+                        <i class="fa fa-save"></i>
+                        Guardar
+                      </button>
+                        <a routerLink="/ventas" class="btn btn-inverse waves-effect waves-light">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
