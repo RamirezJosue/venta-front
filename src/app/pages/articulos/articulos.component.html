@@ -29,6 +29,7 @@
                     <thead>
                         <tr>
                             <th>Código</th>
+                            <th>Categoria</th>
                             <th>Nombre</th>
                             <th>Stock</th>
 
@@ -39,6 +40,9 @@
                         <tr *ngFor="let articulo of articulos">
                             <td>
                                 {{ articulo.codigo}}
+                            </td>
+                            <td>
+                                {{ articulo.categoria }}
                             </td>
                             <td>
                                 {{ articulo.nombre }}

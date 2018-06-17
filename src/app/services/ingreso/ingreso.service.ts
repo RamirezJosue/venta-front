@@ -69,7 +69,7 @@ export class IngresoService {
 
             return this.http.put(url, ingreso)
                 .map((resp: any) => {
-                    swal('Ingreso Actualizado', ingreso.serieComprobante, 'success');
+                    swal('Ingreso Actualizado', 'success');
                     return resp.ingreso;
 
                 });

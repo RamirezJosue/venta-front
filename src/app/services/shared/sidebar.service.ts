@@ -35,7 +35,7 @@ export class SidebarService {
       titulo: 'Compras',
       icono: 'mdi mdi-archive',
       submenu: [
-        { titulo: 'Ingresos', url: '/ingresos ' },
+        { titulo: 'Ingresos', url: '/ingresos' },
         { titulo: 'Proveedores', url: '/personas' },
       ]
     }
