@@ -37,6 +37,7 @@ import { ArticulosComponent } from './articulos/articulos.component';
 import { IngresoComponent } from './ingresos/ingreso.component';
 import { IngresosComponent } from './ingresos/ingresos.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 @NgModule({
     declarations: [
@@ -57,7 +58,8 @@ import { ProfileComponent } from './profile/profile.component';
         ArticulosComponent,
         IngresoComponent,
         IngresosComponent,
-        ProfileComponent
+        ProfileComponent,
+        UsuariosComponent
     ],
     exports: [
         DashboardComponent,
