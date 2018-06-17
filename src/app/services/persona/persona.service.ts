@@ -30,6 +30,14 @@ export class PersonaService {
 
   }
 
+  obtenerPersona(id: string) {
+
+    let url = URL_SERVICIOS + '/persona/' + id;
+    return this.http.get(url)
+      .map((resp: any) => resp.persona);
+
+  }
+
   cargarPersona( id: string ) {
 
     let url = URL_SERVICIOS + '/persona/' + id;

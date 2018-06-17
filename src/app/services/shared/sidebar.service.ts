@@ -30,6 +30,14 @@ export class SidebarService {
         { titulo: 'Categorias', url: '/categorias' },
         { titulo: 'Articulos', url: '/articulos' },
       ]
+    },
+    {
+      titulo: 'Compras',
+      icono: 'mdi mdi-archive',
+      submenu: [
+        { titulo: 'Ingresos', url: '/ingresos ' },
+        { titulo: 'Proveedores', url: '/personas' },
+      ]
     }
   ];
 

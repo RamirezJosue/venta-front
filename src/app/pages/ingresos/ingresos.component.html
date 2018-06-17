@@ -1,0 +1,81 @@
+<div class="row animated fadeIn">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <input #input (keyup)="buscarIngreso( input.value )" type="text" class="form-control" placeholder="Buscar ingreso...">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="text-right">
+                    <button [routerLink]="['/ingreso','nuevo']" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                  <i class="fa fa-plus"></i> 
+                  Crear Ingreso
+                </button>
+                </div>
+
+                <h3 class="card-title">Ingresos registrados ( <small> {{ _ingresoService.totalIngresos }} </small> )</h3>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Proveedor</th>
+                            <th>T. Comprobante</th>
+                            <th>Serie</th>
+                            <th>Número</th>
+                            <th>Fecha</th>
+                            <th>Impuesto</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let ingreso of ingresos">
+                            <td>
+                                {{ ingreso.proveedor}}
+                            </td>
+                            <td>
+                                {{ ingreso.tipoComprobante }}
+                            </td>
+                            <td>
+                                {{ ingreso.serieComprobante }}
+                            </td>
+                            <td>
+                                {{ ingreso.numComprobante }}
+                            </td>
+                            <td>
+                                {{ ingreso.fechaHora }}
+                            </td>
+                            <td>
+                                {{ ingreso.impuesto }}
+                            </td>
+                            <td>
+                                {{ ingreso.totalCompra }}
+                            </td>
+
+                            <td>
+                                <button [routerLink]="['/ingreso', ingreso._id ]" class="btn btn-primary">
+                              <i class="fa fa-edit"></i>
+                            </button>
+
+                                <button (click)="borrarIngreso( ingreso )" class="btn btn-danger">
+                              <i class="fa fa-trash-o"></i>
+                            </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

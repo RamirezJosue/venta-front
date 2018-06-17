@@ -34,6 +34,8 @@ import { PersonaComponent } from './personas/persona.component';
 import { PersonasComponent } from './personas/personas.component';
 import { ArticuloComponent } from './articulos/articulo.component';
 import { ArticulosComponent } from './articulos/articulos.component';
+import { IngresoComponent } from './ingresos/ingreso.component';
+import { IngresosComponent } from './ingresos/ingresos.component';
 import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
@@ -53,6 +55,8 @@ import { ProfileComponent } from './profile/profile.component';
         PersonasComponent,
         ArticuloComponent,
         ArticulosComponent,
+        IngresoComponent,
+        IngresosComponent,
         ProfileComponent
     ],
     exports: [

@@ -12,7 +12,8 @@ import {
   CategoriaService,
   SubirArchivoService,
   PersonaService,
-  ArticuloService
+  ArticuloService,
+  IngresoService
  } from './service.index';
 
 
@@ -31,7 +32,8 @@ import {
     CategoriaService,
     SubirArchivoService,
     PersonaService,
-    ArticuloService
+    ArticuloService,
+    IngresoService
   ],
   declarations: []
 })
