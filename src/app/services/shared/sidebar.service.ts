@@ -19,13 +19,28 @@ export class SidebarService {
       titulo: 'Mantenimientos',
       icono: 'mdi mdi-folder-lock-open',
       submenu: [
-        { titulo: 'Categorias', url: '/categorias' },
         { titulo: 'Clientes', url: '/personas' },
-        { titulo: 'Articulos', url: '/articulos' },
         { titulo: 'Usuarios', url: '/usuarios' }
+      ]
+    },
+    {
+      titulo: 'Almacén',
+      icono: 'mdi mdi-archive',
+      submenu: [
+        { titulo: 'Categorias', url: '/categorias' },
+        { titulo: 'Articulos', url: '/articulos' },
+      ]
+    },
+    {
+      titulo: 'Compras',
+      icono: 'mdi mdi-archive',
+      submenu: [
+        { titulo: 'Ingresos', url: '/ingresos ' },
+        { titulo: 'Proveedores', url: '/personas' },
       ]
     }
   ];
+
 
   constructor() { }
 

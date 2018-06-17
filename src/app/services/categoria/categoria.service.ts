@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { URL_SERVICIOS } from '../../config/config';
-
-import { Categoria } from '../../models/categoria.model';
-
-import { map } from 'rxjs/operators';
 import { UsuarioService } from '../usuario/usuario.service';
+import { Categoria } from '../../models/categoria.model';
 
 @Injectable()
 export class CategoriaService {
@@ -20,13 +17,12 @@ export class CategoriaService {
   cargarCategorias() {
 
     let url = URL_SERVICIOS + '/categoria';
-    url += '?token=' + this._usuarioService.token;
-
     return this.http.get( url )
               .map( (resp: any) => {
                 this.totalCategorias = resp.total;
                 return resp.categorias;
               });
+
   }
 
   obtenerCategoria( id: string ) {
@@ -79,4 +75,3 @@ export class CategoriaService {
   }
 
 }
-

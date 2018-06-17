@@ -12,8 +12,16 @@ import { LoginGuardGuard } from '../services/service.index';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { PersonaComponent } from './personas/persona.component';
 import { PersonasComponent } from './personas/personas.component';
+import { ArticuloComponent } from './articulos/articulo.component';
+import { ArticulosComponent } from './articulos/articulos.component';
+import { IngresoComponent } from './ingresos/ingreso.component';
+import { IngresosComponent } from './ingresos/ingresos.component';
 import { ProfileComponent } from './profile/profile.component';
+<<<<<<< HEAD
 import { UsuariosComponent } from './usuarios/usuarios.component';
+=======
+import { RegisterComponent } from '../login/register.component';
+>>>>>>> 32676c6ac1e7c9f213b0d355b44d2255d4d86bdc
 
 
 const pagesRoutes: Routes = [
@@ -34,6 +42,11 @@ const pagesRoutes: Routes = [
             { path: 'personas', component: PersonasComponent, data: { titulo: 'Mantenimiento de Personas' } },
             { path: 'persona/:id', component: PersonaComponent, data: { titulo: 'Actualizar Persona' } },
             { path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Mantenimiento de Usuarios' } },
+            { path: 'articulos', component: ArticulosComponent, data: { titulo: 'Mantenimiento de Articulos' } },
+            { path: 'articulo/:id', component: ArticuloComponent, data: { titulo: 'Actualizar Articulo' } },
+            { path: 'ingresos', component: IngresosComponent, data: { titulo: 'Mantenimiento de Ingreso' } },
+            { path: 'ingreso/:id', component: IngresoComponent, data: { titulo: 'Actualizar Ingreso' } },
+            { path: 'usuarios', component: RegisterComponent, data: { titulo: 'Mantenimiento de Usuarios' } },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }

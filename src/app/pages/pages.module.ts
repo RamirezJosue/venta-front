@@ -32,6 +32,10 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
 import { PipesModule } from '../pipes/pipes.module';
 import { PersonaComponent } from './personas/persona.component';
 import { PersonasComponent } from './personas/personas.component';
+import { ArticuloComponent } from './articulos/articulo.component';
+import { ArticulosComponent } from './articulos/articulos.component';
+import { IngresoComponent } from './ingresos/ingreso.component';
+import { IngresosComponent } from './ingresos/ingresos.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
@@ -51,7 +55,12 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
         PersonaComponent,
         PersonasComponent,
         ProfileComponent,
-        UsuariosComponent
+        UsuariosComponent,
+        ArticuloComponent,
+        ArticulosComponent,
+        IngresoComponent,
+        IngresosComponent,
+        ProfileComponent
     ],
     exports: [
         DashboardComponent,

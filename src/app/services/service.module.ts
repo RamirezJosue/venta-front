@@ -11,7 +11,9 @@ import {
   LoginGuardGuard,
   CategoriaService,
   SubirArchivoService,
-  PersonaService
+  PersonaService,
+  ArticuloService,
+  IngresoService
  } from './service.index';
 
 
@@ -29,7 +31,9 @@ import {
     LoginGuardGuard,
     CategoriaService,
     SubirArchivoService,
-    PersonaService
+    PersonaService,
+    ArticuloService,
+    IngresoService
   ],
   declarations: []
 })

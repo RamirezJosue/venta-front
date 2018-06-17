@@ -4,6 +4,8 @@ import { URL_SERVICIOS } from '../../config/config';
 import { UsuarioService } from '../usuario/usuario.service';
 import { Persona } from '../../models/persona.model';
 
+import swal from 'sweetalert';
+
 @Injectable()
 export class PersonaService {
 
@@ -17,6 +19,7 @@ export class PersonaService {
   cargarPersonas() {
 
     let url = URL_SERVICIOS + '/persona';
+    url += '?token=' + this._usuarioService.token;
 
     return this.http.get( url )
               .map( (resp: any) => {
@@ -24,6 +27,14 @@ export class PersonaService {
                 this.totalPersonas = resp.total;
                 return resp.personas;
               });
+
+  }
+
+  obtenerPersona(id: string) {
+
+    let url = URL_SERVICIOS + '/persona/' + id;
+    return this.http.get(url)
+      .map((resp: any) => resp.persona);
 
   }
 
