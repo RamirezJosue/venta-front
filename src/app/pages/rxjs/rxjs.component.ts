@@ -69,7 +69,7 @@ export class RxjsComponent implements OnInit, OnDestroy {
     if ( (valor % 2) === 1 ) {
       // impar
       return true;
-    }else {
+    } else {
       // par
       return false;
     }

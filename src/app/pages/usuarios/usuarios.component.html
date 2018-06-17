@@ -3,14 +3,14 @@
         <div class="card">
             <div class="card-body">
 
-                <input #input type="text" class="form-control" placeholder="Buscar Ususario">
+                <input #input (keyup)="buscarUsuario( input.value )" type="text" class="form-control" placeholder="Buscar Ususario">
 
             </div>
         </div>
     </div>
 </div>
 
-<div class="row animated fadeIn">
+<div class="row animated fadeIn" *ngIf="cargando">
     <div class="col-sm-12">
         <div class="alert alert-warning text-center">
             <strong>Cargando..</strong>
@@ -22,12 +22,12 @@
     </div>
 </div>
 
-<div classe="row animated fadeIn">
+<div classe="row animated fadeIn" *ngIf="!cargando">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
 
-                <h3 class="card-title"><strong>Usuarios Registrdos</strong> ( <small>123</small> )</h3>
+                <h3 class="card-title"><strong>Usuarios Registrdos</strong> ( <small>{{ totalRegistros }}</small> )</h3>
 
                 <table class="table table-hover">
                     <thead>
@@ -36,15 +36,16 @@
                             <th>Correo</th>
                             <th>Nombre</th>
                             <th>Role</th>
+                            <th>Role</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>das</td>
-                            <td>asd</td>
-                            <td>asd</td>
-                            <td>asd</td>
+                        <tr *ngFor="let usuario of usuarios">
+                            <td class="w70"><img [src]="usuario.img | imagen" class="im-50 img-circle"></td>
+                            <td>{{ usuario.email }}</td>
+                            <td>{{ usuario.nombre }}</td>
+                            <td>{{ usuario.role }}</td>
                             <td>
                                 <button class="btn btn-success">
                         <i class="fa fa-save"></i>
@@ -58,11 +59,11 @@
                     </tbody>
                 </table>
 
-                <button class="btn btn-secondary">
-                Anteriores
-              </button>
+                <button (click)="cambiarDesde(-5)" class="btn btn-secondary">
+                  Anteriores
+                </button>
 
-                <button class="btn btn-secondary">
+                <button (click)="cambiarDesde(5)" class="btn btn-secondary">
                 Siguentes
               </button>
 
