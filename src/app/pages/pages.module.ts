@@ -37,7 +37,6 @@ import { ArticulosComponent } from './articulos/articulos.component';
 import { IngresoComponent } from './ingresos/ingreso.component';
 import { IngresosComponent } from './ingresos/ingresos.component';
 import { ProfileComponent } from './profile/profile.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
 
 @NgModule({
     declarations: [
@@ -54,8 +53,6 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
         ModalUploadComponent,
         PersonaComponent,
         PersonasComponent,
-        ProfileComponent,
-        UsuariosComponent,
         ArticuloComponent,
         ArticulosComponent,
         IngresoComponent,

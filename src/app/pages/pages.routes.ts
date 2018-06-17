@@ -17,8 +17,8 @@ import { ArticulosComponent } from './articulos/articulos.component';
 import { IngresoComponent } from './ingresos/ingreso.component';
 import { IngresosComponent } from './ingresos/ingresos.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from '../login/register.component';
 
-import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const pagesRoutes: Routes = [
     {
@@ -37,12 +37,11 @@ const pagesRoutes: Routes = [
             { path: 'categorias', component: CategoriaComponent, data: { titulo: 'Mantenimiento de Categorias' } },
             { path: 'personas', component: PersonasComponent, data: { titulo: 'Mantenimiento de Personas' } },
             { path: 'persona/:id', component: PersonaComponent, data: { titulo: 'Actualizar Persona' } },
-            { path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Mantenimiento de Usuarios' } },
             { path: 'articulos', component: ArticulosComponent, data: { titulo: 'Mantenimiento de Articulos' } },
             { path: 'articulo/:id', component: ArticuloComponent, data: { titulo: 'Actualizar Articulo' } },
             { path: 'ingresos', component: IngresosComponent, data: { titulo: 'Mantenimiento de Ingreso' } },
             { path: 'ingreso/:id', component: IngresoComponent, data: { titulo: 'Actualizar Ingreso' } },
-            { path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Mantenimiento de Usuarios' } },
+            { path: 'usuarios', component: RegisterComponent, data: { titulo: 'Mantenimiento de Usuarios' } },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }
