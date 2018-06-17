@@ -13,6 +13,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { PersonaComponent } from './personas/persona.component';
 import { PersonasComponent } from './personas/personas.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 const pagesRoutes: Routes = [
@@ -32,6 +33,7 @@ const pagesRoutes: Routes = [
             { path: 'categorias', component: CategoriaComponent, data: { titulo: 'Mantenimiento de Categorias' } },
             { path: 'personas', component: PersonasComponent, data: { titulo: 'Mantenimiento de Personas' } },
             { path: 'persona/:id', component: PersonaComponent, data: { titulo: 'Actualizar Persona' } },
+            { path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Mantenimiento de Usuarios' } },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }

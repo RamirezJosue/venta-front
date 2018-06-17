@@ -33,6 +33,7 @@ import { PipesModule } from '../pipes/pipes.module';
 import { PersonaComponent } from './personas/persona.component';
 import { PersonasComponent } from './personas/personas.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 @NgModule({
     declarations: [
@@ -49,7 +50,8 @@ import { ProfileComponent } from './profile/profile.component';
         ModalUploadComponent,
         PersonaComponent,
         PersonasComponent,
-        ProfileComponent
+        ProfileComponent,
+        UsuariosComponent
     ],
     exports: [
         DashboardComponent,
