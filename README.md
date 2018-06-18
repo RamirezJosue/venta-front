@@ -1,27 +1,22 @@
-# Adminpro
+# AdminSV
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
-## Development server
+## Servidor de desarrollo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` para un servidor de desarrollo. Navegar a `http://localhost:4200/`. La aplicación se volverá a cargar automáticamente si cambia alguno de los archivos fuente.
 
-## Code scaffolding
+## Andamio de código
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+![GitHub Logo](http://aaronsapplications.com/wp-content/uploads/2018/01/Logo-Sistema-Ventas-300x300.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+- [x] Ususarios, #matenimiento, [https://github.com/RamirezJosue/venta-front/tree/master/src/app/pages/usuarios](), **asd**,   y de <del>usr</del>  @ramirezjosue
+- [x] lista de sintaxis requerida (cualquier lista des-ordenada y ordenada es soportada)
+- [x] esta es una tarea completa
+- [ ] esta es una tarea incompleta
 
-## Running unit tests
+@ramirezjosue
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+~~En Proceso~~
