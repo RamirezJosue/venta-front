@@ -28,6 +28,14 @@ export class VentaService {
 
     }
 
+    obtenerVenta(id: string) {
+
+        let url = URL_SERVICIOS + '/venta/' + id;
+        return this.http.get(url)
+            .map((resp: any) => resp.venta);
+
+    }
+
     cargarVenta(id: string) {
 
         let url = URL_SERVICIOS + '/venta/' + id;
@@ -79,7 +87,7 @@ export class VentaService {
             url += '?token=' + this._usuarioService.token;
             return this.http.post(url, venta)
                 .map((resp: any) => {
-                    swal('Venta Creado', venta.serieComprobante, 'success');
+                    swal('Venta Creado', 'success');
                     return resp.venta;
                 });
         }

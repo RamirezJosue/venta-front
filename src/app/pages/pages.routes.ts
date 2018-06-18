@@ -18,6 +18,8 @@ import { IngresoComponent } from './ingresos/ingreso.component';
 import { IngresosComponent } from './ingresos/ingresos.component';
 import { VentaComponent } from './ventas/venta.component';
 import { VentasComponent } from './ventas/ventas.component';
+import { DetalleVentaComponent } from './detalleVentas/detalleVenta.component';
+import { DetalleVentasComponent } from './detalleVentas/detalleVentas.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
@@ -49,6 +51,8 @@ const pagesRoutes: Routes = [
             // Ventas
             { path: 'ventas', component: VentasComponent, data: { titulo: 'Mantenimiento de Venta' } },
             { path: 'venta/:id', component: VentaComponent, data: { titulo: 'Actualizar Venta' } },
+            { path: 'detalleVentas', component: DetalleVentasComponent, data: { titulo: 'Mantenimiento de DetalleVenta' } },
+            { path: 'detalleVenta/:id', component: DetalleVentaComponent, data: { titulo: 'Actualizar DetalleVenta' } },
             { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
         ]
     }

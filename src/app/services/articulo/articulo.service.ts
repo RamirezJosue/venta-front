@@ -28,6 +28,14 @@ export class ArticuloService {
 
     }
 
+    obtenerArticulo(id: string) {
+
+        let url = URL_SERVICIOS + '/articulo/' + id;
+        return this.http.get(url)
+            .map((resp: any) => resp.articulo);
+
+    }
+
     cargarArticulo(id: string) {
 
         let url = URL_SERVICIOS + '/articulo/' + id;
