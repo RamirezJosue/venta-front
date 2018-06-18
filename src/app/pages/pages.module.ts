@@ -42,6 +42,7 @@ import { DetalleVentasComponent } from './detalleVentas/detalleVentas.component'
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from './modal-upload/modal-upload.component';
+import { UsuarioComponent } from './usuarios/usuario.component';
 
 @NgModule({
     declarations: [
@@ -68,7 +69,8 @@ import { ModalUploadComponent } from './modal-upload/modal-upload.component';
         DetalleVentasComponent,
         ProfileComponent,
         UsuariosComponent,
-        ModalUploadComponent
+        ModalUploadComponent,
+        UsuarioComponent
     ],
     exports: [
         DashboardComponent,

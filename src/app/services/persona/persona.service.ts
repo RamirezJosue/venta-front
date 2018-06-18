@@ -69,21 +69,21 @@ export class PersonaService {
   }
 
     guardarPersona( persona: Persona ) {
-  
+
       let url = URL_SERVICIOS + '/persona';
-  
+
       if ( persona._id ) {
         // actualizando
         url += '/' + persona._id;
         url += '?token=' + this._usuarioService.token;
-  
+
         return this.http.put( url, persona )
                   .map( (resp: any) => {
                     swal('Persona Actualizado', persona.nombre, 'success');
                     return resp.persona;
-  
+
                   });
-  
+
       } else {
         // creando
         url += '?token=' + this._usuarioService.token;
@@ -93,6 +93,6 @@ export class PersonaService {
                   return resp.persona;
                 });
       }
-  
+
   }
 }

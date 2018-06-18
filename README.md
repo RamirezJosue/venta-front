@@ -12,11 +12,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ![GitHub Logo](http://aaronsapplications.com/wp-content/uploads/2018/01/Logo-Sistema-Ventas-300x300.png)
 
-- [x] Ususarios, #matenimiento, [https://github.com/RamirezJosue/venta-front/tree/master/src/app/pages/usuarios](), **asd**,   y de <del>usr</del>  @ramirezjosue
+- [x] Ususarios, #matenimiento, [https://github.com/RamirezJosue/venta-front/tree/master/src/app/pages/usuarios](), **asd**,   y de <del>usr</del> 
 - [x] lista de sintaxis requerida (cualquier lista des-ordenada y ordenada es soportada)
 - [x] esta es una tarea completa
 - [ ] esta es una tarea incompleta
 
-@ramirezjosue
 
 ~~En Proceso~~

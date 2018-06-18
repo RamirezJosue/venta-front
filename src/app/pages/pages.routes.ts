@@ -22,6 +22,7 @@ import { DetalleVentaComponent } from './detalleVentas/detalleVenta.component';
 import { DetalleVentasComponent } from './detalleVentas/detalleVentas.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { UsuarioComponent } from './usuarios/usuario.component';
 
 
 const pagesRoutes: Routes = [
@@ -39,6 +40,7 @@ const pagesRoutes: Routes = [
             { path: 'perfil', component: ProfileComponent, data: { titulo: 'Perfil de usuario' } },
             // Mantenimiento
             { path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Mantenimiento de Usuarios' } },
+            { path: 'usuario/:id', component: UsuarioComponent, data: { titulo: 'Crear un nuevo Usuario' } },
             { path: 'personas', component: PersonasComponent, data: { titulo: 'Mantenimiento de Personas' } },
             { path: 'persona/:id', component: PersonaComponent, data: { titulo: 'Actualizar Persona' } },
             // Almacen

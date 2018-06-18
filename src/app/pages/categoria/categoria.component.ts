@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Categoria } from '../../models/categoria.model';
 import { CategoriaService } from '../../services/service.index';
-import { ModalUploadService } from '../../components/modal-upload/modal-upload.service';
 
 declare var swal: any;
 
@@ -23,7 +22,7 @@ export class CategoriaComponent implements OnInit {
     this.cargarCategorias();
   }
 
-  buscarCategoria( termino: string ){
+  buscarCategoria( termino: string ) {
     if ( termino.length <= 0 ) {
       this.cargarCategorias();
       return;
@@ -50,11 +49,11 @@ export class CategoriaComponent implements OnInit {
             .subscribe( () => this.cargarCategorias() );
   }
 
-  crearCategoria(){
+  crearCategoria() {
 
     swal({
       title: 'Crear categoria',
-      text: 'Ingrese el nombre del categoria',
+      text: 'Ingrese el nombre de la categoria',
       content: 'input',
       icon: 'info',
       buttons: true,
