@@ -25,7 +25,6 @@ import { AccoutSettingsComponent } from './accout-settings/accout-settings.compo
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { CategoriaComponent } from './categoria/categoria.component';
-import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 
 // Pipe Module
@@ -40,6 +39,7 @@ import { VentaComponent } from './ventas/venta.component';
 import { VentasComponent } from './ventas/ventas.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalUploadComponent } from './modal-upload/modal-upload.component';
 
 @NgModule({
     declarations: [
@@ -63,7 +63,8 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
         VentaComponent,
         VentasComponent,
         ProfileComponent,
-        UsuariosComponent
+        UsuariosComponent,
+        ModalUploadComponent
     ],
     exports: [
         DashboardComponent,
