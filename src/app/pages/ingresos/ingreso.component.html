@@ -9,7 +9,7 @@
 
                         <div class="form-group">
                             <label>Proveedor</label>
-                            <select (change)="cambioPersona( $event.target.value )" [(ngModel)]="ingreso.proveedor" name="proveedor" class="form-control" required>
+                            <select (change)="cambioProveedor( $event.target.value )" [(ngModel)]="ingreso.proveedor" name="proveedor" class="form-control" required>
                                 <option value="">Seleccione Proveedor</option>
                                 <option *ngFor="let persona of personas" [value]="persona._id">
                                     {{ persona.nombre }}

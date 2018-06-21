@@ -33,7 +33,7 @@ export class SidebarService {
     },
     {
       titulo: 'Compras',
-      icono: 'mdi mdi-archive',
+      icono: 'mdi mdi-square-inc-cash',
       submenu: [
         { titulo: 'Ingresos', url: '/ingresos' },
         { titulo: 'Proveedores', url: '/personas' },
@@ -41,7 +41,7 @@ export class SidebarService {
     },
      {
       titulo: 'Ventas',
-      icono: 'mdi mdi-archive',
+      icono: 'mdi mdi-shopping',
       submenu: [
         { titulo: 'Ventas', url: '/ventas' },
         { titulo: 'Detalle Ventas', url: '/detalleVentas' },

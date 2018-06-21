@@ -16,13 +16,13 @@ import { Usuario } from '../../models/usuario.model';
 export class IngresoComponent implements OnInit {
 
   personas: Persona[] = [];
-  ingreso: Ingreso = new Ingreso('', '',);
+  ingreso: Ingreso = new Ingreso('', '', );
   persona: Persona = new Persona('', '');
   
 
   constructor(
     public _ingresoService: IngresoService,
-    public _personaService: PersonaService,
+    public _proveedorService: PersonaService,
     public router: Router,
     public activatedRoute: ActivatedRoute
   ) {
@@ -41,7 +41,7 @@ export class IngresoComponent implements OnInit {
 
   ngOnInit() {
 
-    this._personaService.cargarPersonas()
+    this._proveedorService.cargarPersonas()
           .subscribe( personas => this.personas = personas );
 
   }
@@ -53,7 +53,7 @@ export class IngresoComponent implements OnInit {
             console.log( ingreso );
             this.ingreso = ingreso;
             this.ingreso.proveedor = ingreso.persona._id;
-            this.cambioPersona(this.ingreso.proveedor );
+            this.cambioProveedor(this.ingreso.proveedor );
           });
   }
 
@@ -77,9 +77,9 @@ export class IngresoComponent implements OnInit {
 
   }
 
-  cambioPersona( id: string ) {
+  cambioProveedor( id: string ) {
 
-    this._personaService.obtenerPersona( id )
+    this._proveedorService.obtenerPersona( id )
           .subscribe( persona => this.persona = persona );
 
   }
