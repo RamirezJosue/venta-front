@@ -5,8 +5,7 @@ import { VentaService } from '../../services/venta/venta.service';
 import { NgForm } from '@angular/forms';
 import { PersonaService } from '../../services/persona/persona.service';
 import { Persona } from '../../models/persona.model';
-import { UsuarioService } from '../../services/usuario/usuario.service';
-import { Usuario } from '../../models/usuario.model';
+
 
 @Component({
   selector: 'app-venta',
@@ -16,13 +15,12 @@ import { Usuario } from '../../models/usuario.model';
 export class VentaComponent implements OnInit {
 
   personas: Persona[] = [];
-  venta: Venta = new Venta('', '', '');
+  venta: Venta = new Venta('', '', '', '', '', '', '', '', '', '');
   persona: Persona = new Persona('', '');
 
   constructor(
     public _ventaService: VentaService,
-    public _personaService: PersonaService,
-    public _usuarioService: UsuarioService,
+    public _clienteService: PersonaService,
     public router: Router,
     public activatedRoute: ActivatedRoute
   ) {
@@ -41,7 +39,7 @@ export class VentaComponent implements OnInit {
 
   ngOnInit() {
 
-    this._personaService.cargarPersonas()
+    this._clienteService.cargarPersonas()
           .subscribe( personas => this.personas = personas );
   }
 
@@ -52,7 +50,7 @@ export class VentaComponent implements OnInit {
             console.log( venta );
             this.venta = venta;
             this.venta.cliente = venta.persona._id;
-            this.cambioPersona(this.venta.cliente );
+            this.cambioCliente(this.venta.cliente );
           });
   }
 
@@ -76,9 +74,9 @@ export class VentaComponent implements OnInit {
 
   }
 
-  cambioPersona( id: string ) {
+  cambioCliente( id: string ) {
 
-    this._personaService.obtenerPersona( id )
+    this._clienteService.obtenerPersona( id )
           .subscribe( persona => this.persona = persona );
 
   }

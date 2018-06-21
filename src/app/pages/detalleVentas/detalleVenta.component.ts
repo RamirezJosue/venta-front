@@ -18,7 +18,7 @@ export class DetalleVentaComponent implements OnInit {
   ventas: Venta[] = [];
   articulos: Articulo[] = [];
   detalleVenta: DetalleVenta = new DetalleVenta( 0 );
-  venta: Venta = new Venta('', '');
+  venta: Venta = new Venta('', '', '', '', '', '', '', '', '', '');
   articulo: Articulo = new Articulo('', '');
   
 
