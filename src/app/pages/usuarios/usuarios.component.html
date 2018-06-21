@@ -34,11 +34,12 @@
                         </button>
                 </div>
 
-                <h3 class="card-title"><strong>Usuarios Registrdos</strong> ( <small>{{ totalRegistros }}</small> )</h3>
+                <h3 class="card-title"><strong>Total Usuarios Registrados</strong> ( <small>{{ totalRegistros }}</small> )</h3>
 
                 <table class="table table-hover">
                     <thead>
                         <tr>
+                            <th>#</th>
                             <th>Imagen</th>
                             <th>Correo</th>
                             <th>Nombre</th>
@@ -47,7 +48,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let usuario of usuarios">
+                        <tr *ngFor="let usuario of usuarios; let l=index">
+                            <td>{{ l+1 }}</td>
                             <td class="w70">
                                 <img (click)="mostrarModal( usuario._id )" [src]="usuario.img | imagen" class="im-50 img-circle pointer"></td>
                             <td>{{ usuario.email }}</td>

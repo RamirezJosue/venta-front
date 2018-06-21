@@ -28,6 +28,7 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
+                            <th>#</th>
                             <th>Nombre</th>
                             <th>Documento</th>
                             <th>Email</th>
@@ -37,7 +38,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let persona of personas">
+                        <tr *ngFor="let persona of personas;let j=index">
+                            <td> {{ j+1 }} </td>
                             <td>
                                 {{ persona.nombre}}
                             </td>

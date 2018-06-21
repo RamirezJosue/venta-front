@@ -28,6 +28,7 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
+                            <th>N°</th>
                             <th>Venta</th>
                             <th>Articulo</th>
                             <th>Cantidad</th>
@@ -37,7 +38,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let detalleVenta of detalleVentas">
+                        <tr *ngFor="let detalleVenta of detalleVentas; let k=index">
+                            <td>
+                                {{ k+1 }}
+                            </td>
                             <td>
                                 {{ detalleVenta.venta}}
                             </td>
