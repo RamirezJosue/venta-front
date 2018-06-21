@@ -7,6 +7,10 @@ import { URL_SERVICIOS } from '../../config/config';
 import { Router } from '@angular/router';
 import { SubirArchivoService } from '../subir-archivo/subir-archivo.service';
 
+import * as _swal from 'sweetalert';
+import { SweetAlert } from 'sweetalert/typings/core';
+
+const swal: SweetAlert = _swal as any;
 
 @Injectable()
 export class UsuarioService {

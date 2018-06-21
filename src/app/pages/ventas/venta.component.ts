@@ -16,13 +16,13 @@ import { Usuario } from '../../models/usuario.model';
 export class VentaComponent implements OnInit {
 
   personas: Persona[] = [];
-  venta: Venta = new Venta('', '',);
+  venta: Venta = new Venta('', '', '');
   persona: Persona = new Persona('', '');
-  
 
   constructor(
     public _ventaService: VentaService,
     public _personaService: PersonaService,
+    public _usuarioService: UsuarioService,
     public router: Router,
     public activatedRoute: ActivatedRoute
   ) {
@@ -43,7 +43,6 @@ export class VentaComponent implements OnInit {
 
     this._personaService.cargarPersonas()
           .subscribe( personas => this.personas = personas );
-
   }
 
   cargarVenta( id: string ) {

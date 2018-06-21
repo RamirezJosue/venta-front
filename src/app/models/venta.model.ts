@@ -2,9 +2,11 @@ export class Venta {
 
     constructor(
         public tipoComprobante: string,
+        public cliente: string,
         public serieComprobante?: string,
         public numComprobante?: string,
-        public fechaHora?: string,
+        public fechaHora?: DateTimeFormat,
+        public usuario?: string,
         public impuesto?: string,
         public totalVenta?: string,
         public cuentaCliente?: string,
@@ -12,8 +14,6 @@ export class Venta {
         public tipoVenta?: string,
         public plazo?: string,
         public estado?: string,
-        public usuario?: string,
-        public cliente?: string,
         public _id?: string
     ) { }
 
