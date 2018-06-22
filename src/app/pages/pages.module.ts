@@ -39,6 +39,8 @@ import { VentaComponent } from './ventas/venta.component';
 import { VentasComponent } from './ventas/ventas.component';
 import { DetalleVentaComponent } from './detalleVentas/detalleVenta.component';
 import { DetalleVentasComponent } from './detalleVentas/detalleVentas.component';
+import { DetalleIngresoComponent } from './detalleIngresos/detalleIngreso.component';
+import { DetalleIngresosComponent } from './detalleIngresos/detalleIngresos.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from './modal-upload/modal-upload.component';
@@ -67,6 +69,8 @@ import { UsuarioComponent } from './usuarios/usuario.component';
         VentasComponent,
         DetalleVentaComponent,
         DetalleVentasComponent,
+        DetalleIngresoComponent,
+        DetalleIngresosComponent,
         ProfileComponent,
         UsuariosComponent,
         ModalUploadComponent,

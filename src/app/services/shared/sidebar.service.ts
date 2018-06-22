@@ -36,6 +36,7 @@ export class SidebarService {
       icono: 'mdi mdi-square-inc-cash',
       submenu: [
         { titulo: 'Ingresos', url: '/ingresos' },
+        { titulo: 'Detalle Ingresos', url: '/detalleIngresos' },
         { titulo: 'Proveedores', url: '/personas' },
       ]
     },

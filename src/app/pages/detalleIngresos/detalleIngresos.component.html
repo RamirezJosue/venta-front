@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-body">
 
-                <input #input (keyup)="buscarDetalleVenta( input.value )" type="text" class="form-control" placeholder="Buscar detalleVenta...">
+                <input #input (keyup)="buscarDetalleIngreso( input.value )" type="text" class="form-control" placeholder="Buscar detalleIngreso...">
 
             </div>
         </div>
@@ -17,50 +17,50 @@
             <div class="card-body">
 
                 <div class="text-right">
-                    <button [routerLink]="['/detalleVenta','nuevo']" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
+                    <button [routerLink]="['/detalleIngreso','nuevo']" type="button" class="btn waves-effect waves-light btn-rounded btn-primary">
                   <i class="fa fa-plus"></i> 
-                  Crear Detalle Venta
+                  Crear Detalle Ingreso
                 </button>
                 </div>
 
-                <h3 class="card-title">DetalleVentas registrados ( <small> {{ _detalleVentaService.totalDetalleVentas }} </small> )</h3>
+                <h3 class="card-title">DetalleIngresos registrados ( <small> {{ _detalleIngresoService.totalDetalleIngresos }} </small> )</h3>
 
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>N°</th>
-                            <th>Venta</th>
+                            <th>Ingreso</th>
                             <th>Articulo</th>
                             <th>Cantidad</th>
-                            <th>Precio</th>
+                            <th>Precio Compra</th>
+                            <th>Precio Venta</th>
 
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let detalleVenta of detalleVentas; let k=index">
+                        <tr *ngFor="let detalleIngreso of detalleIngresos">
                             <td>
-                                {{ k+1 }}
+                                {{ detalleIngreso.ingreso }}
                             </td>
                             <td>
-                                {{ detalleVenta.venta }}
+                                {{ detalleIngreso.articulo['nombre'] }}
                             </td>
                             <td>
-                                {{ detalleVenta.articulo['nombre'] }}
+                                {{ detalleIngreso.cantidad }}
                             </td>
                             <td>
-                                {{ detalleVenta.cantidad }}
+                                {{ detalleIngreso.precioCompra }}
                             </td>
                             <td>
-                                {{ detalleVenta.precioVenta }}
+                                {{ detalleIngreso.precioVenta }}
                             </td>
 
                             <td>
-                                <button [routerLink]="['/detalleVenta', detalleVenta._id ]" class="btn btn-primary">
+                                <button [routerLink]="['/detalleIngreso', detalleIngreso._id ]" class="btn btn-primary">
                               <i class="fa fa-edit"></i>
                             </button>
 
-                                <button (click)="borrarDetalleVenta( detalleVenta )" class="btn btn-danger">
+                                <button (click)="borrarDetalleIngreso( detalleIngreso )" class="btn btn-danger">
                               <i class="fa fa-trash-o"></i>
                             </button>
                             </td>

@@ -20,6 +20,8 @@ import { VentaComponent } from './ventas/venta.component';
 import { VentasComponent } from './ventas/ventas.component';
 import { DetalleVentaComponent } from './detalleVentas/detalleVenta.component';
 import { DetalleVentasComponent } from './detalleVentas/detalleVentas.component';
+import { DetalleIngresoComponent } from './detalleIngresos/detalleIngreso.component';
+import { DetalleIngresosComponent } from './detalleIngresos/detalleIngresos.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { UsuarioComponent } from './usuarios/usuario.component';
@@ -50,6 +52,8 @@ const pagesRoutes: Routes = [
             // Compras
             { path: 'ingresos', component: IngresosComponent, data: { titulo: 'Mantenimiento de Ingreso' } },
             { path: 'ingreso/:id', component: IngresoComponent, data: { titulo: 'Actualizar Ingreso' } },
+            { path: 'detalleIngresos', component: DetalleIngresosComponent, data: { titulo: 'Mantenimiento de DetalleIngreso' } },
+            { path: 'detalleIngreso/:id', component: DetalleIngresoComponent, data: { titulo: 'Actualizar DetalleIngreso' } },
             // Ventas
             { path: 'ventas', component: VentasComponent, data: { titulo: 'Mantenimiento de Venta' } },
             { path: 'venta/:id', component: VentaComponent, data: { titulo: 'Actualizar Venta' } },

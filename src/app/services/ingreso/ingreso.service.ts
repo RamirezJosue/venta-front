@@ -28,6 +28,14 @@ export class IngresoService {
 
     }
 
+    obtenerIngreso(id: string) {
+
+        let url = URL_SERVICIOS + '/ingreso/' + id;
+        return this.http.get(url)
+            .map((resp: any) => resp.ingreso);
+
+    }
+
     cargarIngreso(id: string) {
 
         let url = URL_SERVICIOS + '/ingreso/' + id;

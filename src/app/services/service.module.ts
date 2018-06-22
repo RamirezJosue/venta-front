@@ -16,7 +16,8 @@ import {
   ArticuloService,
   IngresoService,
   VentaService,
-  DetalleVentaService
+  DetalleVentaService,
+  DetalleIngresoService
  } from './service.index';
 
 
@@ -39,6 +40,7 @@ import {
     IngresoService,
     VentaService,
     DetalleVentaService,
+    DetalleIngresoService,
     ModalUploadService
   ],
   declarations: []
