@@ -29,6 +29,7 @@ export class SidebarService {
       submenu: [
         { titulo: 'Categorias', url: '/categorias' },
         { titulo: 'Articulos', url: '/articulos' },
+        { titulo: 'Unidad de Medida', url: '/unidadmedidas' }
       ]
     },
     {

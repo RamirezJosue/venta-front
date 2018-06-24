@@ -25,6 +25,8 @@ import { DetalleIngresosComponent } from './detalleIngresos/detalleIngresos.comp
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { UsuarioComponent } from './usuarios/usuario.component';
+import { UnidadmedidasComponent } from './unidadmedidas/unidadmedidas.component';
+import { UnidadmedidaComponent } from './unidadmedidas/unidadmedida.component';
 
 
 const pagesRoutes: Routes = [
@@ -49,6 +51,8 @@ const pagesRoutes: Routes = [
             { path: 'categorias', component: CategoriaComponent, data: { titulo: 'Mantenimiento de Categorias' } },
             { path: 'articulos', component: ArticulosComponent, data: { titulo: 'Mantenimiento de Articulos' } },
             { path: 'articulo/:id', component: ArticuloComponent, data: { titulo: 'Actualizar Articulo' } },
+            { path: 'unidadmedidas', component: UnidadmedidasComponent, data: { titulo: 'Mantenimiento de Unidad de Medida' } },
+            { path: 'unidadmedida/:id', component: UnidadmedidaComponent, data: { titulo: 'Nueva Unidad de Medida' } },
             // Compras
             { path: 'ingresos', component: IngresosComponent, data: { titulo: 'Mantenimiento de Ingreso' } },
             { path: 'ingreso/:id', component: IngresoComponent, data: { titulo: 'Actualizar Ingreso' } },

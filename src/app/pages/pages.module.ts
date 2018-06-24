@@ -4,7 +4,7 @@ import { PAGES_ROUTES } from './pages.routes';
 
 import { SharedModule } from '../shared/shared.module';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 
@@ -45,6 +45,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from './modal-upload/modal-upload.component';
 import { UsuarioComponent } from './usuarios/usuario.component';
+import { UnidadmedidasComponent } from './unidadmedidas/unidadmedidas.component';
+import { UnidadmedidaComponent } from './unidadmedidas/unidadmedida.component';
 
 @NgModule({
     declarations: [
@@ -74,7 +76,9 @@ import { UsuarioComponent } from './usuarios/usuario.component';
         ProfileComponent,
         UsuariosComponent,
         ModalUploadComponent,
-        UsuarioComponent
+        UsuarioComponent,
+        UnidadmedidasComponent,
+        UnidadmedidaComponent
     ],
     exports: [
         DashboardComponent,
@@ -88,7 +92,8 @@ import { UsuarioComponent } from './usuarios/usuario.component';
         ChartsModule,
         CommonModule,
         FormsModule,
-        PipesModule
+        PipesModule,
+        ReactiveFormsModule
     ]
 })
 export class PagesModule { }
