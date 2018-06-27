@@ -11,18 +11,18 @@
 
                         <div class="form-group">
                             <label>Venta</label>
-                            <select (change)="cambioPersona( $event.target.value )" [(ngModel)]="detalleVenta.venta" name="venta" class="form-control" required>
+                            <select (change)="cambioVenta( $event.target.value )" [(ngModel)]="detalleVenta.venta" name="venta" class="form-control" required>
                                 <option value="">Seleccione Venta</option>
-                                <option *ngFor="let persona of personas" [value]="persona._id">
+                                <option *ngFor="let venta of ventas" [value]="venta._id">
                                     {{ venta.numComprobante }}
                                 </option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Articulo</label>
-                            <select (change)="cambioPersona( $event.target.value )" [(ngModel)]="detalleVenta.articulo" name="articulo" class="form-control" required>
+                            <select (change)="cambioArticulo( $event.target.value )" [(ngModel)]="detalleVenta.articulo" name="articulo" class="form-control" required>
                                 <option value="">Seleccione Articulo</option>
-                                <option *ngFor="let persona of personas" [value]="persona._id">
+                                <option *ngFor="let articulo of articulos" [value]="articulo._id">
                                     {{ articulo.nombre }}
                                 </option>
                             </select>

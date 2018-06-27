@@ -16,7 +16,7 @@ import { Usuario } from '../../models/usuario.model';
 export class IngresoComponent implements OnInit {
 
   personas: Persona[] = [];
-  ingreso: Ingreso = new Ingreso('', '', );
+  ingreso: Ingreso = new Ingreso('');
   persona: Persona = new Persona('', '');
   
 

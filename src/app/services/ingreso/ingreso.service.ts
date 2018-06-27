@@ -18,6 +18,7 @@ export class IngresoService {
     cargarIngresos() {
 
         let url = URL_SERVICIOS + '/ingreso';
+        url += '?token=' + this._usuarioService.token;
 
         return this.http.get(url)
             .map((resp: any) => {
@@ -25,6 +26,7 @@ export class IngresoService {
                 this.totalIngresos = resp.total;
                 return resp.ingresos;
             });
+
 
     }
 

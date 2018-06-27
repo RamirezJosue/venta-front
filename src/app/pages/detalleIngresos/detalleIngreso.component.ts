@@ -18,8 +18,8 @@ export class DetalleIngresoComponent implements OnInit {
   ingresos: Ingreso[] = [];
   articulos: Articulo[] = [];
   detalleIngreso: DetalleIngreso = new DetalleIngreso( 0 );
-  ingreso: Ingreso = new Ingreso('', '');
-  articulo: Articulo = new Articulo('', '');
+  ingreso: Ingreso = new Ingreso('');
+  articulo: Articulo = new Articulo('');
   
 
   constructor(
@@ -44,9 +44,9 @@ export class DetalleIngresoComponent implements OnInit {
 
   ngOnInit() {
 
-    this._ingresoService.cargarIngreso('')
-          .subscribe( ingresos => this.ingresos = ingresos );
-    this._articuloService.cargarArticulo('')
+    this._ingresoService.cargarIngresos()
+      .subscribe(ingresos => this.ingresos = ingresos);
+    this._articuloService.cargarArticulos()
       .subscribe(articulos => this.articulos = articulos);
 
   }
@@ -60,7 +60,7 @@ export class DetalleIngresoComponent implements OnInit {
             this.detalleIngreso.ingreso = detalleIngreso.ingreso._id;
             this.detalleIngreso.articulo = detalleIngreso.articulo._id;
             this.cambioIngreso(this.detalleIngreso.ingreso );
-            this.cambioArticulo(this.detalleIngreso.articulo);
+            this.cambioArticulo(this.detalleIngreso.articulo );
           });
   }
 

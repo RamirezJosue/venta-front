@@ -44,9 +44,9 @@ export class DetalleVentaComponent implements OnInit {
 
   ngOnInit() {
 
-    this._ventaService.cargarVenta('')
-          .subscribe( ventas => this.ventas = ventas );
-    this._articuloService.cargarArticulo('')
+    this._ventaService.cargarVentas()
+      .subscribe(ventas => this.ventas = ventas);
+    this._articuloService.cargarArticulos()
       .subscribe(articulos => this.articulos = articulos);
 
   }
